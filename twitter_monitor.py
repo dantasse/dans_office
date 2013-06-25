@@ -36,6 +36,6 @@ for line in r.iter_lines(chunk_size=64):
         if (text.startswith('@dansoffice ')):
             text = text.replace('@dansoffice ', '')
         print text
-        s.write(text)
+        s.write(text[0:80]) # 80 char limit on the LCD
         last_request = time.time()
 
